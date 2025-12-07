@@ -1,0 +1,51 @@
+public class Practice_1 {
+    public static void main(String[] args) {
+//        примитивные целочисленные типы
+        byte i = 1; // аналогично int, short, char
+        switch (i) {
+            case 1:
+                System.out.println("один");
+                break;
+            case 2:
+                System.out.println("два");
+                break;
+        }
+
+//        соответствующие классы-оболочки
+        Integer a = 3; // аналогично
+        switch (a) {
+            case 3:
+                System.out.println("три");
+                break;
+            case 4:
+                System.out.println("четыре");
+                break;
+        }
+
+//        String
+        String str = "привет";
+        switch (str) {
+            case "привет":
+                System.out.println("Здравствуйте!");
+                break;
+            case "пока":
+                System.out.println("До свидания!");
+                break;
+        }
+
+//        перечисления
+        enum Time {Morning, Afternoon, Evening}
+        Time t = Time.Afternoon;
+        switch (t) {
+            case Morning:
+                System.out.println("good morning");
+                break;
+            case Afternoon:
+                System.out.println("good afternoon");
+                break;
+            case Evening:
+                System.out.println("good evening");
+                break;
+        }
+    }
+}
