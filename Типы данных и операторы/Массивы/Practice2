@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class Practice {
+    public static void main(String[] args) {
+
+        int[] arr = {5, 2, 9, 1, 7};
+        int[] arr2 = {5, 2, 9, 1, 7};
+        int[] arr3 = {5, 2, 9, 1, 8};
+
+        // Arrays.toString(...) - строковое представление массива
+        System.out.println("toString(arr): " + Arrays.toString(arr));
+
+        // Arrays.sort(...) - сортирует массив по возрастанию
+        Arrays.sort(arr);   
+        System.out.println("sorted arr: " + Arrays.toString(arr));
+
+        // Arrays.binarySearch(...) - после сортировки возвращает значение по индексу
+        int pos = Arrays.binarySearch(arr, 7);
+        System.out.println("binarySearch(7) => index: " + pos);
+
+        // Arrays.equals(...) - проверка равенства по компонентам
+        System.out.println("arr2 equals arr? " + Arrays.equals(arr, arr2));
+        System.out.println("arr2 equals arr3? " + Arrays.equals(arr2, arr3));
+
+        // 5. Arrays.compare(...) - сравнивает массивы
+        System.out.println("compare(arr2, arr3) = " + Arrays.compare(arr2, arr3));
+    }
+}
