@@ -1,0 +1,16 @@
+final class Person {
+
+    private String name;
+
+    Person(String name){ this.name = name;  }
+}
+// Ошибка
+class Employee extends Person{
+
+    private String company;
+
+    Employee(String name, String company){
+        super(name);
+        this.company = company;
+    }
+}  
