@@ -1,0 +1,27 @@
+public class Practice {
+
+    // Метод с переменным числом аргументов
+    public static void print(int... nums) {
+        System.out.println("Метод с переменным числом аргументов:");
+        for (int n : nums) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
+    }
+
+    // Перегрузка
+    public static void print(String label, int... nums) {
+        System.out.println("Перегрузка:");
+        System.out.print(label + ": ");
+        for (int n : nums) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        print(1, 2, 3);
+        print("Numbers", 4, 5, 6);
+    }
+}
