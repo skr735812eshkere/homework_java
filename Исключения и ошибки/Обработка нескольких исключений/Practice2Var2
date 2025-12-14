@@ -1,0 +1,18 @@
+public class PracticeVar2 {
+    public static void main(String[] args) {
+        try {
+            throwException(3);
+        } catch (Ex3 e) {
+            System.out.println("проверка Ex3");
+        } catch (Ex2 e) {
+            System.out.println("проверка Ex2");
+        } catch (Ex1 e) {
+            System.out.println("проверка Ex1");
+        }
+    }
+    static void throwException(int level) throws Ex1 {
+        if (level == 3) throw new Ex3();
+        if (level == 2) throw new Ex2();
+        throw new Ex1();
+    }
+}
