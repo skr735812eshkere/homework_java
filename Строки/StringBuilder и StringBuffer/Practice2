@@ -1,0 +1,23 @@
+// String в StringBuilder
+String s = "Hello";
+StringBuilder sb = new StringBuilder(s);
+
+// String в StringBuffer
+String s = "Hello";
+StringBuffer sbuf = new StringBuffer(s);
+
+// StringBuilder в String
+StringBuilder sb = new StringBuilder("Hello");
+String s = sb.toString();
+
+// StringBuffer в StringBuilder
+StringBuffer sbuf = new StringBuffer("Hello");
+String s = sbuf.toString();
+
+// StringBuilder в StringBuffer
+StringBuilder sb = new StringBuilder("Hello");
+StringBuffer sbuf = new StringBuffer(sb.toString());
+
+// StringBuffer в StringBuilder
+StringBuffer sbuf = new StringBuffer("Hello");
+StringBuilder sb = new StringBuilder(sbuf.toString());
