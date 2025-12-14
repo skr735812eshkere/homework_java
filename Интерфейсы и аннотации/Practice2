@@ -1,0 +1,23 @@
+/*
+Аннотация @Deprecated помечает элемент как устаревший, что может быть полезно, если после обновления API класса или пакета,
+мы хотим, чтобы какие-то компоненты больше не использовались. 
+Компилятор будет выдавать предупреждение при каждой попытке использовать такой компонент
+*/
+class Person {
+		@Deprecated
+    void universityAffiliation() { // устаревший метод
+        System.out.println("СПБПУ");
+    }
+    void universityName() {
+        System.out.println("СПБПУ");
+    }
+}
+
+class Main{
+  
+    public static void main(String[] args) throws Exception{
+           
+        Person Anastasiya = new Person();
+        barsik.universityAffiliation(); // скомпилируется, но будет предупреждение
+    }
+}
