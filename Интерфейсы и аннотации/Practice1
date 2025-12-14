@@ -1,0 +1,24 @@
+/*
+Аннотация @Override указывает компилятору, что текущий метод переопределяет метод из суперкласса. 
+Если метод с такой сигнатурой в суперклассе не найден, компилятор выдаст ошибку
+*/
+class Students {
+    void universityAffiliation() {
+        System.out.println("ВУЗ Санкт-Петербурга");
+    }
+}
+class Person extends Students {
+    @Override
+    void universityAffiliations() { // названия не совпадают
+        System.out.println("СПБПУ");
+    }
+}
+ 
+class Main{
+  
+    public static void main(String[] args) throws Exception{
+           
+        Person Anastasiya = new Person();
+        barsik.universityAffiliation(); // error: method does not override or implement a method from a supertype
+    }
+}
