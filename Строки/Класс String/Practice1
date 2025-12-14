@@ -1,0 +1,44 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "  My name is Anastasiya  ";
+
+        // length() возвращает длину строки
+        System.out.println("length(): " + s.length());
+
+        // trim() удаляет пробелы в начале и в конце строки
+        String trimmed = s.trim();
+        System.out.println("trim(): '" + trimmed + "'");
+
+        // toUpperCase() переводит строку в верхний регистр
+        System.out.println("toUpperCase(): " + trimmed.toUpperCase());
+
+        // toLowerCase() переводит строку в нижний регистр
+        System.out.println("toLowerCase(): " + trimmed.toLowerCase());
+
+        // charAt(int index) возвращает символ по индексу
+        System.out.println("charAt(1): " + trimmed.charAt(1));
+
+        // substring(int begin, int end) возвращает подстроку
+        System.out.println("substring(0, 5): " + trimmed.substring(0, 5));
+
+        // contains(CharSequence) проверяет наличие подстроки
+        System.out.println("contains(\"name\"): " + trimmed.contains("name"));
+
+        // replace(old, new) заменяет символы или подстроки
+        System.out.println("replace(\"Anastasiya\", \"Kira\"): " +
+                trimmed.replace("Anastasiya", "Kira"));
+
+        // split(String regex) разбивает строку на массив
+        String[] words = trimmed.split(" ");
+        System.out.println("split():");
+        for (String word : words) {
+            System.out.println(word);
+        }
+
+        // equals(Object) сравнение строк по содержимому
+        System.out.println("equals(\"My name is Anastasiya\"): " +
+                trimmed.equals("My name is Anastasiya"));
+    }
+}
