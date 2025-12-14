@@ -1,0 +1,26 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("начало программы");
+
+        try {
+            methodWithHandledException();
+            methodWithUnhandledException();
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException");
+        }
+
+        System.out.println("конец программы");
+    }
+    static void methodWithHandledException() {
+        try {
+            int x = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException перехвачен внутри метода");
+        }
+    }
+
+    static void methodWithUnhandledException() {
+        int[] arr = {1, 2, 3};
+        System.out.println(arr[10]); // аварийное завершение
+    }
+}
