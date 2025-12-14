@@ -1,0 +1,62 @@
+public class Main {
+
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("hello");
+
+        // append(String) добавляет строку в конец
+        sb.append(" world");
+        System.out.println("append(): " + sb);
+
+        // insert(int, String) вставка строки по индексу
+        sb.insert(5, ",");
+        System.out.println("insert(): " + sb);
+
+        // delete(int, int) удаляет диапазон символов
+        sb.delete(5, 6);
+        System.out.println("delete(): " + sb);
+
+        // deleteCharAt(int) удаляет символ по индексу
+        sb.deleteCharAt(5);
+        System.out.println("deleteCharAt(): " + sb);
+
+        // replace(int, int, String) замена части строки
+        sb.replace(5, 10, " java");
+        System.out.println("replace(): " + sb);
+
+        // reverse() переворачивает строку
+        sb.reverse();
+        System.out.println("reverse(): " + sb);
+
+        // length() длина строки
+        System.out.println("length(): " + sb.length());
+
+        // charAt(int) символ по индексу
+        System.out.println("charAt(0): " + sb.charAt(0));
+
+        // setCharAt(int, char) изменение символа
+        sb.setCharAt(0, 'X');
+        System.out.println("setCharAt(): " + sb);
+
+        // capacity() текущая емкость буфера
+        System.out.println("capacity(): " + sb.capacity());
+
+
+        StringBuffer sbuf = new StringBuffer("thread");
+
+        // append()
+        sbuf.append(" safe");
+        System.out.println("append(): " + sbuf);
+
+        // insert()
+        sbuf.insert(6, "-");
+        System.out.println("insert(): " + sbuf);
+
+        // replace()
+        sbuf.replace(0, 6, "multi");
+        System.out.println("replace(): " + sbuf);
+
+        // reverse()
+        sbuf.reverse();
+        System.out.println("reverse(): " + sbuf);
+    }
+}
