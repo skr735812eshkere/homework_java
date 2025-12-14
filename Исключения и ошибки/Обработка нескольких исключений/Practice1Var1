@@ -1,0 +1,16 @@
+public class PracticeVar1 {
+    public static void main(String[] args) {
+        try {
+            nullCheck("23");
+            nullCheck(null);
+        } catch (NumberFormatException | NullPointerException e) {
+            System.out.println("ошибка входных данных: " + e.getClass().getSimpleName());
+        }
+    }
+    static void nullCheck(String value) {
+        if (value == null) {
+            throw new NullPointerException();
+        }
+        Integer.parseInt(value); // NumberFormatException
+    }
+}
