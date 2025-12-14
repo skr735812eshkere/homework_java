@@ -1,0 +1,18 @@
+// Аннотация @SuppressWarnings отключает определенные предупреждения компилятора для аннотированного элемента
+import java.util.ArrayList;
+import java.util.List;
+ 
+class Main{
+  
+    public static void main(String[] args) throws Exception{
+           
+        methodWithRawType();
+    }
+    
+	 @SuppressWarnings("unchecked") // отключение предупреждения о неуказанном типе данных
+    public static void methodWithRawType() {
+        List names = new ArrayList();
+        names.add("Tom");
+        System.out.println(names);
+    }
+}
