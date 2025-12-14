@@ -1,0 +1,18 @@
+import java.util.Date;
+import java.util.Formatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Date now = new Date();
+        Formatter format = new Formatter();
+        format.format("Часы (24): %tH%n", now);
+        format.format("Минуты: %tM%n", now);
+        format.format("Секунды: %tS%n", now);
+        format.format("Год: %tY%n", now);
+        format.format("День недели: %tA%n", now);
+        System.out.print(fmt.toString());
+        format.close();
+    }
+}
